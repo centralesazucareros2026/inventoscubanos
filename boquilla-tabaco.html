@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Boquilla Higiénica de Tabaco - José J. de la Torre | Inventores Cubanos</title>
+    <meta name="description" content="En 1921, un cubano patentó la boquilla que perfeccionó el arte de fumar cigarros habanos.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            animation: fadeInDown 1s ease;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .patent-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .content-section h2 {
+            color: #4a00e0;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-left: 5px solid #8e2de2;
+            padding-left: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            border-left: 4px solid #8e2de2;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .timeline-item h3 {
+            color: #4a00e0;
+            margin-bottom: 10px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .impact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .impact-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .hero-section, .content-section, .cta-section {
+                padding: 25px;
+            }
+        }
+
+        .quote {
+            background: #f8f9fa;
+            border-left: 5px solid #8e2de2;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #8e2de2 0%, #4a00e0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">🇨🇺 INVENTORES CUBANOS</div>
+            <h1>La Boquilla Higiénica de Tabaco</h1>
+            <p class="subtitle">Ciencia aplicada al placer: el invento que perfeccionó el cigarro cubano</p>
+        </header>
+
+        <div class="hero-section">
+            <h2 style="color: #4a00e0; text-align: center; margin-bottom: 30px;">José J. de la Torre - Elegancia e Ingeniería</h2>
+            
+            <div class="patent-info">
+                <div class="info-card">
+                    <h3>1921</h3>
+                    <p>Año de la Patente</p>
+                </div>
+                <div class="info-card">
+                    <h3>US 1,378,103</h3>
+                    <p>Número de Patente</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚬 Tabaco</h3>
+                    <p>Industria Cubana</p>
+                </div>
+            </div>
+
+            <div class="quote">
+                "Cigarros cubanos, sí... ¿pero sabías que también inventamos cómo fumarlos mejor?"
+            </div>
+        </div>
+
+        <div class="content-section" style="background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%); color: white;">
+            <h2 style="color: white; border-left-color: white;">🎬 Mira el Video Corto</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">Descubre esta increíble historia en solo 30 segundos</p>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="TU_LINK_DE_YOUTUBE_AQUI" target="_blank" class="cta-button" style="background: #ff0000; font-size: 1.3em; display: inline-flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.5em;">▶️</span> Ver en YouTube
+                </a>
+            </div>
+            <p style="opacity: 0.9; text-align: center;">⏱️ Duración: 30 segundos | 🔥 Vale la pena cada segundo</p>
+        </div>
+
+        <div class="content-section">
+            <h2>📖 La Historia</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>El Problema de la Elegancia</h3>
+                    <p>Los cigarros premium cubanos tenían un problema: <span class="highlight">el tabaco se deshacía en los labios</span> de los fumadores más refinados, arruinando la experiencia.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>La Solución Técnica</h3>
+                    <p>José J. de la Torre diseñó una <span class="highlight">boquilla higiénica con filtro especial</span> que se insertaba en la punta del cigarro, manteniendo su estructura sin alterar el sabor.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Ciencia y Placer</h3>
+                    <p>Una solución técnica para la industria más famosa de la isla. <span class="highlight">¡Ciencia aplicada al placer!</span> Ingeniería cubana al servicio de la tradición.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🚀 Innovación en la Tradición</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="icon">🎯</div>
+                    <h3>Precisión</h3>
+                    <p>Filtro diseñado específicamente para cigarros premium</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">🧪</div>
+                    <h3>Higiénico</h3>
+                    <p>Protegía al fumador y mantenía la limpieza</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">🏆</div>
+                    <h3>Calidad</h3>
+                    <p>Preservaba la integridad del cigarro habano</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">💎</div>
+                    <h3>Elegancia</h3>
+                    <p>Para los fumadores más exigentes del mundo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🔬 Diseño Ingenioso</h2>
+            <p style="margin-bottom: 20px;">La boquilla de De la Torre era una obra maestra de simplicidad:</p>
+            <ol style="margin-left: 20px; line-height: 2;">
+                <li><strong>Filtro higiénico especial</strong> - materiales que no alteraban el sabor</li>
+                <li><strong>Inserción perfecta</strong> - se ajustaba a diferentes diámetros de cigarro</li>
+                <li><strong>Mantenía la estructura</strong> - evitaba que el tabaco se deshiciera</li>
+                <li><strong>Fácil de usar</strong> - los fumadores lo adoptaron rápidamente</li>
+                <li><strong>Protección dual</strong> - cuidaba tanto el cigarro como al fumador</li>
+            </ol>
+            <div class="quote" style="margin-top: 30px;">
+                "Mientras el mundo fumaba, Cuba no solo producía los mejores cigarros... también inventaba cómo disfrutarlos mejor."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🌟 El Contexto Histórico</h2>
+            <p style="margin-bottom: 15px;">En 1921, la industria tabacalera cubana era la más prestigiosa del mundo. Los habanos representaban lujo, tradición y calidad incomparable.</p>
+            <p style="margin-bottom: 15px;">José J. de la Torre entendió que <span class="highlight">la experiencia del fumador era tan importante como la calidad del tabaco</span>. Su boquilla no era solo un accesorio: era ingeniería al servicio del placer.</p>
+            <p>Este invento demostró que la innovación cubana no solo estaba en cultivar el mejor tabaco del mundo, sino también en perfeccionar cada aspecto de su disfrute.</p>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #4a00e0; margin-bottom: 20px;">¡Ciencia Aplicada al Placer! ¿Qué Te Parece?</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1em;">Hay muchos más inventores cubanos que revolucionaron el mundo y que nadie recuerda.</p>
+            <a href="#" class="cta-button">👉 Ver Más Inventores Cubanos</a>
+            <a href="#" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">📺 Sígueme en YouTube</a>
+        </div>
+
+        <footer>
+            <p>🇨🇺 Inventores Cubanos - Rescatando la historia olvidada</p>
+            <p style="margin-top: 10px; opacity: 0.8;">José J. de la Torre | Patente US 1,378,103 | 1921</p>
+        </footer>
+    </div>
+</body>
+</html>

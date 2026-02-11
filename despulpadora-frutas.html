@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Despulpadora de Frutas - Manuel Galán | Inventores Cubanos</title>
+    <meta name="description" content="Descubre cómo un ingeniero cubano revolucionó el procesamiento de frutas tropicales en 1944 con su innovadora despulpadora.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            animation: fadeInDown 1s ease;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .patent-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .content-section h2 {
+            color: #f5576c;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-left: 5px solid #f093fb;
+            padding-left: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            border-left: 4px solid #f093fb;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .timeline-item h3 {
+            color: #f5576c;
+            margin-bottom: 10px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .impact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .impact-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            opacity: 0.9;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .hero-section, .content-section, .cta-section {
+                padding: 25px;
+            }
+        }
+
+        .quote {
+            background: #f8f9fa;
+            border-left: 5px solid #f093fb;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">🇨🇺 INVENTORES CUBANOS</div>
+            <h1>La Despulpadora de Frutas</h1>
+            <p class="subtitle">El invento que puso las frutas tropicales cubanas en el mundo</p>
+        </header>
+
+        <div class="hero-section">
+            <h2 style="color: #f5576c; text-align: center; margin-bottom: 30px;">Manuel Galán - El Maestro de las Frutas Tropicales</h2>
+            
+            <div class="patent-info">
+                <div class="info-card">
+                    <h3>1944</h3>
+                    <p>Año de la Patente</p>
+                </div>
+                <div class="info-card">
+                    <h3>US 2,343,834</h3>
+                    <p>Número de Patente</p>
+                </div>
+                <div class="info-card">
+                    <h3>🥭 Tropical</h3>
+                    <p>Frutas Cubanas</p>
+                </div>
+            </div>
+
+            <div class="quote">
+                "Hacer jugo de mango o guayaba parece fácil, pero a escala industrial era un problema... hasta que Manuel Galán lo resolvió con pura ingeniería cubana."
+            </div>
+        </div>
+
+        <div class="content-section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+            <h2 style="color: white; border-left-color: white;">🎬 Mira el Video Corto</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">Descubre esta increíble historia en solo 30 segundos</p>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="TU_LINK_DE_YOUTUBE_AQUI" target="_blank" class="cta-button" style="background: #ff0000; font-size: 1.3em; display: inline-flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.5em;">▶️</span> Ver en YouTube
+                </a>
+            </div>
+            <p style="opacity: 0.9; text-align: center;">⏱️ Duración: 30 segundos | 🔥 Vale la pena cada segundo</p>
+        </div>
+
+        <div class="content-section">
+            <h2>📖 La Historia</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>El Desafío Tropical</h3>
+                    <p>Mientras el mundo procesaba manzanas y uvas, Cuba tenía un problema único: <span class="highlight">mangos, guayabas y frutas tropicales</span> con semillas resistentes y pulpa fibrosa que destruían las máquinas tradicionales.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>La Solución de Galán</h3>
+                    <p>Manuel Galán diseñó una máquina con paletas internas especiales que usaban <span class="highlight">fuerza centrífuga</span> para separar perfectamente la semilla de la pulpa, sin destruir la textura ni el sabor.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Exportación Mundial</h3>
+                    <p>Gracias a este invento, Cuba pudo exportar conservas de frutas tropicales de <span class="highlight">calidad mundial</span>. La despulpadora se convirtió en el motor silencioso del campo cubano.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🚀 Impacto en la Industria</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="icon">🥭</div>
+                    <h3>Frutas Tropicales</h3>
+                    <p>Primera máquina diseñada específicamente para mangos y guayabas</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Fuerza Centrífuga</h3>
+                    <p>Tecnología innovadora para separación perfecta</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">📦</div>
+                    <h3>Exportación</h3>
+                    <p>Conservas cubanas conquistaron mercados internacionales</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">🏭</div>
+                    <h3>Industria</h3>
+                    <p>Revolucionó la producción agroindustrial cubana</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🔬 ¿Cómo Funcionaba?</h2>
+            <p style="margin-bottom: 20px;">El ingenio de Galán estaba en los detalles:</p>
+            <ol style="margin-left: 20px; line-height: 2;">
+                <li><strong>Paletas internas especiales</strong> diseñadas para resistir frutas duras</li>
+                <li>La fruta entraba entera en la máquina</li>
+                <li>Las paletas giraban a alta velocidad creando <strong>fuerza centrífuga</strong></li>
+                <li>La pulpa se separaba limpiamente de las semillas fibrosas</li>
+                <li>Resultado: pulpa pura lista para conservas, sin desperdiciar nada</li>
+            </ol>
+            <div class="quote" style="margin-top: 30px;">
+                "Mientras el mundo procesaba manzanas, Galán diseñó algo para la resistencia de nuestras frutas tropicales. Ese fue su genio."
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #f5576c; margin-bottom: 20px;">¿Conocías Este Motor del Campo Cubano?</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1em;">Hay muchos más inventores cubanos que revolucionaron el mundo y que nadie recuerda.</p>
+            <a href="#" class="cta-button">👉 Ver Más Inventores Cubanos</a>
+            <a href="#" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">📺 Sígueme en YouTube</a>
+        </div>
+
+        <footer>
+            <p>🇨🇺 Inventores Cubanos - Rescatando la historia olvidada</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Manuel Galán | Patente US 2,343,834 | 1944</p>
+        </footer>
+    </div>
+</body>
+</html>
