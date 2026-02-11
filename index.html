@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventores Cubanos - Historia Olvidada que Cambió el Mundo 🇨🇺</title>
+    <meta name="description" content="Descubre los inventores cubanos que revolucionaron el mundo y que nadie recuerda. Patentes, innovaciones y genio olvidado.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0f0c29;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: white;
+            animation: fadeInDown 1s ease;
+        }
+
+        .flag {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #fff, #4facfe);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+            color: #4facfe;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5em;
+            color: #4facfe;
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            color: white;
+            opacity: 0.9;
+        }
+
+        .intro-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+
+        .intro-section h2 {
+            color: #302b63;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.3em;
+        }
+
+        .inventores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .inventor-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .inventor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card-header {
+            padding: 30px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        .card-header > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .card-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .card-4 { background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%); }
+        .card-5 { background: linear-gradient(135deg, #f12711 0%, #f5af19 100%); }
+
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .card-year {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .card-inventor {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-description {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .card-patent {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .card-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .card-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-section h2 {
+            color: #302b63;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3em;
+            margin: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-youtube {
+            background: #ff0000;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            opacity: 0.9;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 2em;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #4facfe;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            .inventores-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-section, .cta-section {
+                padding: 30px 20px;
+            }
+
+            .card-title {
+                font-size: 1.5em;
+            }
+        }
+
+        .quote-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .quote-section blockquote {
+            font-size: 1.5em;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="flag">🇨🇺</div>
+            <h1>INVENTORES CUBANOS</h1>
+            <p class="tagline">La Historia Olvidada que Cambió el Mundo</p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Inventos Revolucionarios</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1900s</h3>
+                    <p>Era de Innovación</p>
+                </div>
+                <div class="stat-card">
+                    <h3>🌍</h3>
+                    <p>Impacto Mundial</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="intro-section">
+            <h2>¿Por Qué Nadie Habla de Esto?</h2>
+            <p class="intro-text">
+                Cuba no solo exportaba azúcar, tabaco y ron. Exportaba <strong>ingenio, innovación y genialidad</strong>. 
+                Antes de 1959, ingenieros y científicos cubanos registraron patentes en Estados Unidos que 
+                revolucionaron industrias enteras: desde la medicina hasta la agricultura, desde la seguridad industrial 
+                hasta el lujo del tabaco.
+            </p>
+            <div class="highlight-box">
+                💡 Estos inventos salvaron vidas, crearon fortunas y cambiaron el mundo... 
+                pero la historia los enterró.
+            </div>
+        </div>
+
+        <div class="quote-section">
+            <blockquote>
+                "La creatividad no tiene fronteras. El genio cubano no necesitó Silicon Valley 
+                para cambiar el mundo... solo necesitó lápiz, papel y una idea brillante."
+            </blockquote>
+            <p class="quote-author">— La Historia que Deberías Conocer</p>
+        </div>
+
+        <h2 style="color: white; text-align: center; font-size: 2.5em; margin: 40px 0 30px;">Los Inventores Olvidados</h2>
+
+        <div class="inventores-grid">
+            <!-- Card 1: Clarificador de Azúcar -->
+            <div class="inventor-card">
+                <div class="card-header card-1">
+                    <div class="card-icon">🏭</div>
+                    <div class="card-year">1941</div>
+                    <h3 class="card-title">El Clarificador de Azúcar</h3>
+                    <p class="card-inventor">E. Antonio Gil</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        La torre que limpió el azúcar del mundo sin químicos agresivos. Un sistema de gravedad 
+                        que revolucionó la industria azucarera desde La Habana.
+                    </p>
+                    <div class="card-patent">Patente: US 2,245,225</div>
+                    <a href="clarificador-azucar.html" class="card-button">
+                        Ver Historia Completa →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Despulpadora de Frutas -->
+            <div class="inventor-card">
+                <div class="card-header card-2">
+                    <div class="card-icon">🥭</div>
+                    <div class="card-year">1944</div>
+                    <h3 class="card-title">La Despulpadora de Frutas</h3>
+                    <p class="card-inventor">Manuel Galán</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Mientras el mundo procesaba manzanas, él diseñó algo para mangos y guayabas. 
+                        Fuerza centrífuga que puso las frutas tropicales cubanas en el mapa mundial.
+                    </p>
+                    <div class="card-patent">Patente: US 2,343,834</div>
+                    <a href="despulpadora-frutas.html" class="card-button" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        Ver Historia Completa →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Portasuero Moderno -->
+            <div class="inventor-card">
+                <div class="card-header card-3">
+                    <div class="card-icon">🏥</div>
+                    <div class="card-year">1956</div>
+                    <h3 class="card-title">El Abuelo del Portasuero</h3>
+                    <p class="card-inventor">José A. de la Vega</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Antes era imposible mover pacientes con suero. Este habanero diseñó el trípode 
+                        ajustable que salvó vidas y está en cada hospital hoy.
+                    </p>
+                    <div class="card-patent">Patente: US 2,743,896</div>
+                    <a href="portasuero-moderno.html" class="card-button" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        Ver Historia Completa →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Boquilla de Tabaco -->
+            <div class="inventor-card">
+                <div class="card-header card-4">
+                    <div class="card-icon">🚬</div>
+                    <div class="card-year">1921</div>
+                    <h3 class="card-title">La Boquilla Higiénica</h3>
+                    <p class="card-inventor">José J. de la Torre</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Ciencia aplicada al placer. El filtro que perfeccionó la experiencia del habano 
+                        más famoso del mundo sin perder sabor ni elegancia.
+                    </p>
+                    <div class="card-patent">Patente: US 1,378,103</div>
+                    <a href="boquilla-tabaco.html" class="card-button" style="background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);">
+                        Ver Historia Completa →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5: Válvula Anti-Explosión -->
+            <div class="inventor-card">
+                <div class="card-header card-5">
+                    <div class="card-icon">💥</div>
+                    <div class="card-year">1927</div>
+                    <h3 class="card-title">La Válvula Anti-Explosión</h3>
+                    <p class="card-inventor">José Morell</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-description">
+                        Puro steampunk cubano. La trampa de vapor automática que detuvo las explosiones 
+                        mortales en los centrales azucareros y salvó miles de vidas.
+                    </p>
+                    <div class="card-patent">Patente: US 1,630,138</div>
+                    <a href="valvula-anti-explosion.html" class="card-button" style="background: linear-gradient(135deg, #f12711 0%, #f5af19 100%);">
+                        Ver Historia Completa →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>¿Por Qué Importa Esto?</h2>
+            <p style="font-size: 1.2em; margin: 20px 0 30px; color: #555; line-height: 1.8;">
+                Porque la historia que conoces está <strong>incompleta</strong>. <br>
+                Porque el genio no tiene pasaporte. <br>
+                Porque estas mentes brillantes merecen ser recordadas.
+            </p>
+            <p style="font-size: 1.3em; margin-bottom: 40px; color: #302b63;">
+                <strong>Suscríbete y ayúdame a rescatar más historias olvidadas 👇</strong>
+            </p>
+            <a href="TU_CANAL_DE_YOUTUBE" target="_blank" class="cta-button cta-youtube">
+                📺 Sígueme en YouTube
+            </a>
+            <a href="TU_INSTAGRAM" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                📸 Instagram
+            </a>
+            <a href="TU_TIKTOK" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                🎵 TikTok
+            </a>
+        </div>
+
+        <footer>
+            <div class="social-links">
+                <a href="TU_CANAL_DE_YOUTUBE" target="_blank" title="YouTube">📺</a>
+                <a href="TU_INSTAGRAM" target="_blank" title="Instagram">📸</a>
+                <a href="TU_TIKTOK" target="_blank" title="TikTok">🎵</a>
+            </div>
+            <p style="font-size: 1.3em; margin-top: 30px;">🇨🇺 <strong>INVENTORES CUBANOS</strong></p>
+            <p>Rescatando la historia olvidada, un invento a la vez</p>
+            <p style="opacity: 0.7; margin-top: 20px;">© 2025 - Todos los derechos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>
